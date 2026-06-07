@@ -69,7 +69,6 @@ Firmware có sẵn 3 bài nhạc phát qua Piezo:
 
 Bài nhạc tự động lặp lại cho đến khi nói "dừng nhạc".
 
-### Thêm bài nhạc mới
 
 ---
 
@@ -115,25 +114,12 @@ Bài nhạc tự động lặp lại cho đến khi nói "dừng nhạc".
 
 | Lỗi | Nguyên nhân | Cách sửa |
 |---|---|---|
-| `#include not found` | Chưa cài Edge Impulse library | Xem bước 4 |
-| `I2S init failed` | Sai pin hoặc conflict | Kiểm tra kết nối dây |
-| `Confidence luôn thấp` | Model chưa train tốt | Thu thêm data, retrain |
-| `Không nhận wake word` | Micro xa hoặc ồn | Nói gần mic, giảm noise |
-| `Heap thấp` | Model quá lớn | Dùng partition "Huge APP" |
+| `#include not found` | Chưa cài Edge Impulse library |
+| `I2S init failed` | Sai pin hoặc conflict |
+| `Confidence luôn thấp` | Model chưa train tốt | 
+| `Không nhận wake word` | Micro xa hoặc ồn | 
+| `Heap thấp` | Model quá lớn |
 
-### Điều chỉnh ngưỡng
-
-Nếu hệ thống nhận sai lệnh, tăng threshold trong `config.h`:
-
-```cpp
-#define EI_CONFIDENCE_THRESHOLD   0.80f  // Tăng lên 80%
-```
-
-Nếu hệ thống khó nhận lệnh, giảm threshold:
-
-```cpp
-#define EI_CONFIDENCE_THRESHOLD   0.60f  // Giảm xuống 60%
-```
 
 ---
 
