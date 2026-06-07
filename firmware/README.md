@@ -71,28 +71,6 @@ Bài nhạc tự động lặp lại cho đến khi nói "dừng nhạc".
 
 ### Thêm bài nhạc mới
 
-Mở file `melodies.h`, thêm mảng `Note` mới:
-
-```cpp
-const Note melody_new_song[] PROGMEM = {
-    {NOTE_C4, 400},   // Nốt Đô quãng 4, 400ms
-    {NOTE_E4, 400},   // Nốt Mi
-    {REST, 200},       // Nghỉ 200ms
-    {NOTE_G4, 800},   // Nốt Sol, 800ms
-};
-const int melody_new_song_len = sizeof(melody_new_song) / sizeof(Note);
-```
-
-Sau đó thêm vào `MELODY_LIST[]`:
-```cpp
-const MelodyInfo MELODY_LIST[] = {
-    { melody_twinkle,        melody_twinkle_len,        "Twinkle Twinkle" },
-    { melody_happy_birthday, melody_happy_birthday_len, "Happy Birthday"  },
-    { melody_jingle_bells,   melody_jingle_bells_len,   "Jingle Bells"    },
-    { melody_new_song,       melody_new_song_len,       "New Song"        },  // ← THÊM
-};
-```
-
 ---
 
 ## 🔧 Debug / Troubleshooting
