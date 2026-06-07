@@ -174,6 +174,4 @@ voice_control_speaker/
 
 ---
 
-## 📜 Giấy phép
 
-Dự án đồ án — sử dụng cho mục đích học tập.
